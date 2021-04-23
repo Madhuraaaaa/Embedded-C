@@ -1,11 +1,11 @@
 # Embedded-C
-# Embedded C Programming Examples with Continuous Integration and Code Quality
+## Embedded C Programming Examples with Continuous Integration and Code Quality
 
 ## In Action
 
 |ON|OFF|
 |:--:|:--:|
-|![ON](simulation/ON.png)|![OFF](simulation/OFF.png)|
+|![ON](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/ON.PNG)|![OFF](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/OFF.PNG)|
 
 #### CI and Code Quality
 
