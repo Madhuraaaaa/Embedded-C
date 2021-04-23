@@ -1,7 +1,7 @@
 # Embedded-C
 ## Embedded C Programming Examples with Continuous Integration and Code Quality
 
-## In Action
+## Actions
 
 |ON|OFF|
 |:--:|:--:|
