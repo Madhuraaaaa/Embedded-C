@@ -3,7 +3,11 @@ PROJ_NAME = Activity
 BUILD_DIR = Build
 
 # All Source code files
-SRC = act_main.c
+SRC = act_main.c\
+
+
+# All header file paths
+INC = -I inc
 
 # Find out the OS and configure the variables accordingly
 ifdef OS	# All configurations for Windwos OS
