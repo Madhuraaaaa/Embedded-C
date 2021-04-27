@@ -13,8 +13,6 @@
 #include <util/delay.h>
 #include "inc/Activity_1.h"
 #include "inc/Activity_2.h"
-#include "Activity_2.c"
-#include "Activity_1.c"
 
 /**
  * @brief Main function
