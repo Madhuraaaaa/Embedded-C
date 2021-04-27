@@ -1,0 +1,10 @@
+#ifndef ACTIVITY_2_H_INCLUDED
+#define ACTIVITY_2_H_INCLUDED
+
+#define ADC_ENABLE (ADEN)
+
+void init_ADC(){
+    ADMUX=(1<<REFS0);
+    ADCSRA=(1<<ADC_ENABLE)|(7<<ADPS0);
+}
+#endif // ACTIVITY_2_H_INCLUDED

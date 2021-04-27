@@ -3,10 +3,8 @@
 
 ## Actions
 
-|ON|OFF|
-|:--:|:--:|
-|![ON](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/ON.PNG)|![OFF](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/OFF.PNG)|
-
+### Activity-1 
+![ON](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/ON.PNG)
 #### CI and Code Quality
 
 |Build|Cppcheck|Codacy|
