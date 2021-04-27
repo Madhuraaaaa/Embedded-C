@@ -11,10 +11,10 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
-#include "Activity_1.c"
+#include "../Activity_1.c"
 #include "Activity_1.h"
 #include "Activity_2.h"
-#include "Activity_2.c"
+#include "../Activity_2.c"
 
 /**
  * @brief Main function
