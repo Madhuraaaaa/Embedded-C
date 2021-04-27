@@ -2,8 +2,11 @@
 #include <util/delay.h>
 #include "Activity_2.h"
 
+void init_ADC(){
+    ADMUX=(1<<REFS0);
+    ADCSRA=(1<<ADC_ENABLE)|(7<<ADPS0);
+}
 uint16_t Read_ADC(uint8_t n){
-    init_ADC();
     ADMUX&=0XF8;
     n=n&0b00000111;
     ADMUX|=n;

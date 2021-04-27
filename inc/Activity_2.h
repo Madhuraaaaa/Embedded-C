@@ -2,9 +2,7 @@
 #define ACTIVITY_2_H_INCLUDED
 
 #define ADC_ENABLE (ADEN)
+void init_ADC();
+uint16_t Read_ADC(uint8_t n);
 
-void init_ADC(){
-    ADMUX=(1<<REFS0);
-    ADCSRA=(1<<ADC_ENABLE)|(7<<ADPS0);
-}
 #endif // ACTIVITY_2_H_INCLUDED
