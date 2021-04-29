@@ -6,7 +6,8 @@ BUILD_DIR = Build
 SRC = main.c\
 src/Activity_1.c\
 src/Activity_2.c\
-
+src/Activity_3.c\
+src/Activity_4.c
 
 # All header file paths
 INC = -I inc

@@ -10,10 +10,11 @@
  */
 
 #include <avr/io.h>
-#include<stdio.h>
 #include <util/delay.h>
 #include "inc/Activity_1.h"
 #include "inc/Activity_2.h"
+#include "inc/Activity_3.h"
+#include "inc/Activity_4.h"
 /**
  * @brief Main function
  * 
@@ -25,12 +26,15 @@ int main(void)
     while(1)
     {
         uint16_t var=0;
+        char temperature_op;
         //ACTIVITY-1
         detectUser();  
-        //ACTIVITY-2         
+        //ACTIVITY-2/3/4         
         if (detectUser()==1)
         {
             var=Read_ADC(0);
+            temperature_op= OutPWM(var);
+            dispOP(temperature_op);
         }
     }
     return 0;
