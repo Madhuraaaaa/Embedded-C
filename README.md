@@ -4,7 +4,22 @@
 ## Actions
 
 ### Activity-1 
-![ON](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/ON.PNG)
+|ON|OFF|
+|:--:|:--:|
+|![ON](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/on_act1.PNG)|![OFF](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/off_act1.PNG)|
+
+### Activity-2
+|OUTPUT-1|OUTPUT-2|
+|:--:|:--:|
+|![OUTPUT1](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/on_act2.PNG)|![OUTPUT2](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/on_act2_pot.PNG)|
+
+### RAM Table
+![OUTPUT](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/RAM_Table.PNG)
+
+### Activity-3
+![OUTPUT](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/UART1_act4.PNG)
+### Activity-4
+
 #### CI and Code Quality
 
 |Build|Cppcheck|Codacy|
