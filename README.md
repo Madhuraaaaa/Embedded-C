@@ -17,9 +17,11 @@
 ![OUTPUT](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/RAM_Table.PNG)
 
 ### Activity-3
-![OUTPUT](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/UART1_act4.PNG)
+|OUTPUT-1|OUTPUT-2|
+|:--:|:--:|
+|![OUTPUT1](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/PWM1_act3.PNG)|![OUTPUT2](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/PWM2_act3.PNG)|
 ### Activity-4
-
+![OUTPUT](https://github.com/Madhuraaaaa/Embedded-C/blob/main/Simulation/UART1_act4.PNG)
 #### CI and Code Quality
 
 |Build|Cppcheck|Codacy|
