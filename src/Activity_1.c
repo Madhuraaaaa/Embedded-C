@@ -8,20 +8,21 @@
  * @copyright Copyright (c) 2021
  * 
  */
-#include<avr/io.h>
-#include<util/delay.h>
+#include <avr/io.h>
+#include <util/delay.h>
 #include "Activity_1.h"
 
 /**
  * @brief Function for port initialization
  * 
  */
-void init_port(void){
-    DDRB&=~(1<<IN_PIN1);
-    DDRB|=(1<<OUT_PIN);
-    DDRB&=~(1<<IN_PIN2);
-    PORTB|=(1<<IN_PIN1);
-    PORTB|=(1<<IN_PIN2);
+void init_port(void)
+{
+    DDRB &=~(1 << IN_PIN1);
+    DDRB |= (1 << OUT_PIN);
+    DDRB &=~(1 << IN_PIN2);
+    PORTB |= (1 << IN_PIN1);
+    PORTB |= (1 << IN_PIN2);
 }
 
 /**
@@ -29,26 +30,26 @@ void init_port(void){
  * 
  * @return int 
  */
-int detectUser(){
+int detectUser()
+{
     if (BUTTON_ON)
+    {
+        if (HEATER_ON)
         {
-            if (HEATER_ON)
-            {
-                LED_SET;
-                _delay_ms(50000);
-                return 1;
-            }
-            else
-            {
-                LED_CLEAR;
-                _delay_ms(5000);
-            }
+            LED_SET;
+            _delay_ms(5000);
+            return 1;
         }
         else
         {
             LED_CLEAR;
             _delay_ms(5000);
         }
+    }
+    else
+    {
+        LED_CLEAR;
+        _delay_ms(5000);
+    }
     return 0;
 }
-
