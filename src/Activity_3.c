@@ -13,28 +13,26 @@
 #include "Activity_3.h"
 
 /**
- * @brief Function for initial PWM set-up
- * 
- */
-void PWMset(void)
-{
-
-    //FOR INITIALIZATION OF TIMER
-    TCCR1A |= (1 << COM1A1) | (1 << WGM10) | (1 << WGM11);
-    //8-BIT PRESCALER
-    TCCR1B |= (1 << CS11) | (1 << CS10) | (1 << WGM12);
-    SET_PWM_OUTPUT_PIN;
-}
-
-/**
  * @brief Function to calculate temperature value
  * 
  * @param temp_value 
  * @return char 
  */
+/**
+ * @brief Function for initial PWM set-up
+ * 
+ */
+void PWMset(void)
+{
+    //FOR INITIALIZATION OF TIMER
+    TCCR1A |= (1 << COM1A1) | (1 << WGM10) | (1 << WGM11);
+    //8-BIT PRESCALER
+    TCCR1B |= (1 << CS11) | (1 << CS10) | (1 << WGM12);
+    DDRB |= (1 << PORTB1);
+}
 char PWM_Reading(uint16_t temp_value)
 {
-    char temperature_op = 0;
+    char temperature_op = 20;
     if ((temp_value >= 0) && (temp_value <= 200))
     {
         //FOR 20% DUTY CYCLE PWM SIGNAL

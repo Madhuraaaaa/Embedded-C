@@ -13,42 +13,43 @@
 #include "Activity_1.h"
 
 /**
+ * @brief Function to check whether heater sensing is on or off
+ * 
+ * @return int 
+ */
+
+/**
  * @brief Function for port initialization
  * 
  */
 void init_port(void)
 {
-    DDRB &=~(1 << IN_PIN1);
-    DDRB |= (1 << OUT_PIN);
-    DDRB &=~(1 << IN_PIN2);
+    DDRB &= ~(1 << IN_PIN1);
+    DDRB &= ~(1 << OUT_PIN);
+    DDRB &= ~(1 << IN_PIN2);
     PORTB |= (1 << IN_PIN1);
     PORTB |= (1 << IN_PIN2);
+    DDRB |= (1 << OUT_PIN);
 }
-
-/**
- * @brief Function to check whether heater sensing is on or off
- * 
- * @return int 
- */
 int detectUser()
 {
-    if (BUTTON_ON)
+    if (!(PINB & (1 << IN_PIN1)))
     {
-        if (HEATER_ON)
+        if (!(PINB & (1 << IN_PIN2)))
         {
-            LED_SET;
-            _delay_ms(5000);
+            PORTB |= (1 << OUT_PIN);
+            _delay_ms(50000);
             return 1;
         }
         else
         {
-            LED_CLEAR;
+            PORTB &= ~(1 << OUT_PIN);
             _delay_ms(5000);
         }
     }
     else
     {
-        LED_CLEAR;
+        PORTB &= ~(1 << OUT_PIN);
         _delay_ms(5000);
     }
     return 0;

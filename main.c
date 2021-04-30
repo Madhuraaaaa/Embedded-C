@@ -22,8 +22,13 @@
  * 
  * @return int 
  */
+
 int main(void)
 {
+    init_port();
+    init_ADC();
+    PWMset();
+    setUART(103);
     while (1)
     {
         uint16_t var = 0;

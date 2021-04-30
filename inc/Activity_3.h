@@ -12,12 +12,6 @@
 #define ACTIVITY_3_H_INCLUDED
 
 /**
- * @brief Defination for initialization of PWM output pin
- * 
- */
-#define SET_PWM_OUTPUT_PIN DDRB |= (1 << PB1);
-
-/**
  * @brief Function
  * 
  */

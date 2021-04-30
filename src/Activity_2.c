@@ -30,6 +30,7 @@ void init_ADC()
  */
 uint16_t Read_ADC(uint8_t n)
 {
+    init_ADC();
     ADMUX &= 0XF8;
     n = n & 0b00000111;
     ADMUX |= n;
