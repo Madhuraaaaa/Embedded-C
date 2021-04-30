@@ -1,17 +1,6 @@
 /**
  * @file main.c
- * @author Madhura (mdhuk8719@gmail.com)
- * @brief 
- * @version 0.1
- * @date 2021-04-27
- * 
- * @copyright Copyright (c) 2021
- * 
- */
-
-/**
- * @file main.c
- * @author your name (you@domain.com)
+ * @author Madhura
  * @brief Main function file for car seat heating application
  * @version 0.1
  * @date 2021-04-30
