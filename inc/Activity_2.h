@@ -2,6 +2,8 @@
 #define ACTIVITY_2_H_INCLUDED
 
 #define ADC_ENABLE (ADEN)
+#define ADC_INTERRUPT_NOT_OCCURRED !(ADCSRA&(1<<ADIF))
+#define SET_ADC_INTERRUPT_FLAG ADCSRA|=(1<<ADIF);
 void init_ADC();
 uint16_t Read_ADC(uint8_t n);
 

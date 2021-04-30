@@ -4,41 +4,40 @@
 
 
 void PWMset(void){
+
+    //FOR INITIALIZATION OF TIMER
     TCCR1A|=(1<<COM1A1)|(1<<WGM10)|(1<<WGM11);
-    TCCR1B|=(1<<CS11)|(1<<CS10)|(1<<WGM12);
-    DDRB|=(1<<PB1);
+    //8-BIT PRESCALER
+    TCCR1B|=(1<<CS11)|(1<<CS10)|(1<<WGM12); 
+    SET_PWM_OUTPUT_PIN;
 }
 
-char OutPWM (uint16_t temp_value)
+char PWM_Reading(uint16_t temp_value)
 {
-    char temperature;
+    char temperature_op=0;
     if((temp_value>=0) && (temp_value<=200)){
-
-        OCR1A = 205; //20% duty cycle
-        temperature = 20;
-        _delay_ms(50);
+        //FOR 20% DUTY CYCLE PWM SIGNAL
+        OCR1A = 205; 
+        temperature_op = 20;
+        _delay_ms(30);
     }
     else if((temp_value>=201) && (temp_value<=500)){
-
-        OCR1A = 410; //40% duty cycle
-        temperature = 25;
-       _delay_ms(50);
+        //FOR 40% DUTY CYCLE PWM SIGNAL
+        OCR1A = 410; 
+        temperature_op = 25;
+        _delay_ms(30);
     }
     else if((temp_value>=501) && (temp_value<=700)){
-
-        OCR1A = 717;//70% duty cycle
-        temperature = 29;
-        _delay_ms(50);
+        //FOR 70% DUTY CYCLE PWM SIGNAL
+        OCR1A = 717;
+        temperature_op = 29;
+        _delay_ms(30);
     }
     else if((temp_value>=701) && (temp_value<=1024)){
-
-        OCR1A = 973; //95% duty cycle
-        temperature = 33;
-        _delay_ms(50);
+        //FOR 95% DUTY CYCLE PWM SIGNAL
+        OCR1A = 973;
+        temperature_op = 33;
+        _delay_ms(30);
     }
-    else{
-        OCR1A = 0; //0% output
-        temperature = 0;
-    }
-    return temperature;
+    return temperature_op;
 }

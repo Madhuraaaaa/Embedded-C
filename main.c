@@ -15,11 +15,7 @@
 #include "inc/Activity_2.h"
 #include "inc/Activity_3.h"
 #include "inc/Activity_4.h"
-/**
- * @brief Main function
- * 
- * @return int 
- */
+#define val_ADC 0
 
 int main(void)
 {
@@ -29,12 +25,12 @@ int main(void)
         char temperature_op;
         //ACTIVITY-1
         detectUser();  
-        //ACTIVITY-2/3/4         
+        //ACTIVITY-2, 3 & 4
         if (detectUser()==1)
         {
-            var=Read_ADC(0);
-            temperature_op= OutPWM(var);
-            dispOP(temperature_op);
+            var=Read_ADC(val_ADC);
+            temperature_op= PWM_Reading(var);
+            displayOUTPUT(temperature_op);
         }
     }
     return 0;

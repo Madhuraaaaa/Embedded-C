@@ -1,8 +1,9 @@
 #ifndef ACTIVITY_4_H_INCLUDED
 #define ACTIVITY_4_H_INCLUDED
-
-void setUART(uint8_t val_UBRR);
-char UARTread();
-void dispOP(char outputs);
+#define ENABLE_UART_COMMUNICATION UCSR0B = (1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0)|(1<<TXCIE0);
+#define SERIAL_MONITOR_DATA_NOT_WRITTEN !(UCSR0A & (1<<UDRE0))
+#define BAUD_RATE_SETUP UBRR0L=baud_rate;
+void setUART(uint8_t baud_rate);
+void displayOUTPUT(char outputs);
 
 #endif // ACTIVITY_4_H_INCLUDED

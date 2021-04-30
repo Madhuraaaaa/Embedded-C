@@ -2,19 +2,18 @@
 #include<util/delay.h>
 #include "Activity_4.h"
 
-void setUART(uint8_t val_UBRR)
+void setUART(uint8_t baud_rate)
 {
-    UBRR0L = val_UBRR;
-    UBRR0H = (val_UBRR>>8)&(0x00ff);
+    BAUD_RATE_SETUP;
+    UBRR0H = (baud_rate>>8)&(0x00ff);
     UCSR0C = (1<<UMSEL00)|(1<<UCSZ01)|(1<<UCSZ01);
-    UCSR0B = (1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0)|(1<<TXCIE0);
-
+    ENABLE_UART_COMMUNICATION;
 }
-void dispOP(char outputs)
+void displayOUTPUT(char outputs)
 {
-    while(!(UCSR0A & (1<<UDRE0)))
+    while(SERIAL_MONITOR_DATA_NOT_WRITTEN)
     {
-
+        //DO NOTHING
     }
     UDR0 = outputs;
 }

@@ -10,24 +10,24 @@ void init_port(void){
     PORTB|=(1<<IN_PIN2);
 }
 int detectUser(){
-    if (!(PINB&(1<<IN_PIN1)))
+    if (BUTTON_ON)
         {
-            if (!(PINB&(1<<IN_PIN2)))
+            if (HEATER_ON)
             {
-            PORTB|=(1<<OUT_PIN);
-        _delay_ms(5000);
-        return 1;
+                LED_SET;
+                _delay_ms(50000);
+                return 1;
             }
             else
             {
-            PORTB&=~(1<<OUT_PIN);
-          _delay_ms(5000);
+                LED_CLEAR;
+                _delay_ms(5000);
             }
         }
         else
         {
-        PORTB&=~(1<<OUT_PIN);
-      _delay_ms(5000);
+            LED_CLEAR;
+            _delay_ms(5000);
         }
     return 0;
 }
